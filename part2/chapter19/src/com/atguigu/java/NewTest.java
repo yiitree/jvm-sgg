@@ -17,10 +17,13 @@ public class NewTest {
     }
 
     public void newArray() {
+        // newarray
         int[] intArray = new int[10];
+        // anewarray
         Object[] objArray = new Object[10];
+        // mutilanewarray
         int[][] mintArray = new int[10][10];
-
+        // anewarray
         String[][] strArray = new String[10][];
     }
 

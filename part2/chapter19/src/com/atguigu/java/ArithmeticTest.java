@@ -14,12 +14,12 @@ public class ArithmeticTest {
     public void method1() {
         int i = 10;
         double j = i / 0.0;
-        System.out.println(j);//无穷大
+        System.out.println(j);//无穷大   正常数/无穷小=Infinity无穷大
 
 
         double d1 = 0.0;
         double d2 = d1 / 0.0;
-        System.out.println(d2);//NaN: not a number
+        System.out.println(d2);//NaN: not a number  无穷小/无穷小=nan
     }
 
     public void method2() {
@@ -67,6 +67,14 @@ public class ArithmeticTest {
         int i = 10;
         i = i++;
         System.out.println(i);//10
+    }
+
+    //思考
+    @Test
+    public void method9() {
+        int i = 10;
+        i = ++i;
+        System.out.println(i);//11
     }
 
 }

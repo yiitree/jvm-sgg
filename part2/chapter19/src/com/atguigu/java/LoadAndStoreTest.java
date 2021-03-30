@@ -19,7 +19,7 @@ public class LoadAndStoreTest {
         System.out.println(arr);
     }
 
-    //2.常量入栈指令
+    //2.常量入栈指令 int类型
     public void pushConstLdc() {
         int i = -1;
         int a = 5;
@@ -29,7 +29,7 @@ public class LoadAndStoreTest {
         int e = 32767;
         int f = 32768;
     }
-
+    // long\double\object
     public void constLdc() {
         long a1 = 1;
         long a2 = 2;
