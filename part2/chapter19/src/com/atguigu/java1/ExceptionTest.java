@@ -41,7 +41,13 @@ public class ExceptionTest {
         }
     }
 
-    //思考：如下方法返回结果为多少？
+    /**
+     * 思考：如下方法返回结果为多少？
+     * 此时在try中就已经返回结果了，但是有final，过程为：
+     * 首先在局部变量表0的位置，也就是要返回的位置赋值hello，
+     * 然后再声明一个变量，放到局部变量表1的位置一个atguigu，
+     * 总结就是:把str赋值hello后，然后又复制一个变量到1的位置，内容为atguigu，只是没有使用
+     */
     public static String func() {
         String str = "hello";
         try{
@@ -53,7 +59,6 @@ public class ExceptionTest {
     }
 
     public static void main(String[] args) {
-
         System.out.println(func());//hello
     }
 }
