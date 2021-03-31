@@ -7,10 +7,11 @@ package com.atguigu.java;
  */
 public class InterfaceMethodTest {
     public static void main(String[] args) {
+        // invokespecial
         AA aa = new BB();
-
+        // invokeinterface
         aa.method2();
-
+        // invokestatic
         AA.method1();
     }
 }
