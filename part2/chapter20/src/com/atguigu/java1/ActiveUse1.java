@@ -6,9 +6,6 @@ import org.junit.Test;
 import java.io.*;
 
 /**
- * @author shkstart
- * @create 2020-09-14 16:37
- *
  * 测试类的主动使用：意味着会调用类的<clinit>()，即执行了类的初始化阶段
  *
  * 1. 当创建一个类的实例时，比如使用new关键字，或者通过反射、克隆、反序列化。
@@ -77,5 +74,14 @@ class Order implements Serializable{
 
     public static void method(){
         System.out.println("Order method()....");
+    }
+}
+
+class a {
+    public static void main(String[] args) throws ClassNotFoundException {
+        Object o = new Object();
+        final Class<?> aClass = o.getClass();
+        final ClassLoader classLoader = aClass.getClassLoader();
+        final Class<?> aClass1 = classLoader.loadClass("java.lang.String");
     }
 }
