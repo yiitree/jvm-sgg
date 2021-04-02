@@ -61,7 +61,7 @@ public class UserClassLoader extends ClassLoader {
     }
 
     public static void main(String[] args) {
-        String rootDir = "D:\\code\\workspace_idea5\\JVMDemo1\\chapter04\\src\\";
+        String rootDir = "E:\\code\\jvm\\jvm-sgg\\part2\\chapter21\\src";
 
         try {
             //创建自定义的类的加载器1
@@ -76,7 +76,7 @@ public class UserClassLoader extends ClassLoader {
             System.out.println(clazz1.getClassLoader());
             System.out.println(clazz2.getClassLoader());
 
-            //######################
+            //######################系统类加载，注意路径为out目录下的
             Class clazz3 = ClassLoader.getSystemClassLoader().loadClass("com.atguigu.java.User");
             System.out.println(clazz3.getClassLoader());
 

@@ -17,7 +17,7 @@ public class ClassLoaderTest {
         }
         //从上面的路径中随意选择一个类,来看看他的类加载器是什么:引导类加载器
         ClassLoader classLoader = java.security.Provider.class.getClassLoader();
-        System.out.println(classLoader);
+        System.out.println(classLoader);// null,因为是引导类加载器，c编写，所以获取结果为null
 
         System.out.println("***********扩展类加载器*************");
         String extDirs = System.getProperty("java.ext.dirs");
