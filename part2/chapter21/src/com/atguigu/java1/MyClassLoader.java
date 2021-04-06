@@ -13,12 +13,13 @@ import java.nio.channels.WritableByteChannel;
  * 自定义类的加载器
  */
 public class MyClassLoader extends ClassLoader {
-    private String rootDir;
+    private final String rootDir;
 
     public MyClassLoader(String rootDir) {
         this.rootDir = rootDir;
     }
 
+    @Override
     protected Class<?> findClass(String className) throws ClassNotFoundException {
         Class clazz = this.findLoadedClass(className);
         FileChannel fileChannel = null;
